@@ -7,17 +7,34 @@
 </head>
 <body>
 
-<h1>TransLaço</h1>
+<h1>TRANSLAÇO</h1>
 
 <div class="container">
     <div class="box">
         <h2>Cadastro</h2>
-        <form>
-            <input type="text" placeholder="Nome" required>
-            <input type="email" placeholder="Email" required>
-            <input type="password" placeholder="Senha" required>
+
+        <form method="POST" action="#">
+
+            <input type="text" name="nome_social" placeholder="Nome social" required>
+
+            <input type="text" name="nome_civil" placeholder="Nome civil (opcional)">
+
+            <input type="email" name="email" placeholder="Email" required>
+
+            <input type="password" name="senha" placeholder="Senha" required>
+
+            <select name="area_interesse" required>
+                <option value="">Área de interesse</option>
+                <option>Direito</option>
+                <option>Tecnologia</option>
+                <option>Administração</option>
+                <option>Saúde</option>
+                <option>Educação</option>
+            </select>
+
             <button type="submit">Cadastrar</button>
         </form>
+
         <a href="./login.html">Voltar para login</a>
     </div>
 </div>

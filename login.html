@@ -12,11 +12,19 @@
 <div class="container">
     <div class="box">
         <h2>Login</h2>
-        <form>
-            <input type="email" placeholder="Email" required>
-            <input type="password" placeholder="Senha" required>
+
+        <form method="POST" action="#">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+
             <button type="submit">Entrar</button>
         </form>
+
+        <a href="#">Esqueceu sua senha?</a>
         <a href="./cadastro.html">Faça o seu cadastro</a>
     </div>
 </div>
