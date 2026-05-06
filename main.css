@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Poppins:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+
+    background-color: #EEF7FB;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* LOGO PRINCIPAL */
+h1 {
+    position: absolute;
+    top: 40px;
+
+    font-family: 'Major Mono Display', monospace;
+    font-size: 54px;
+    letter-spacing: 4px;
+
+    color: #9B5DE5;
+
+    display: inline-block;
+    padding-bottom: 6px;
+}
+
+
+/* Caixa */
+.box {
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.75); /* mais visível */
+
+    color: #333; /* melhor leitura */
+
+    border-radius: 16px;
+    padding: 30px;
+    width: 320px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    text-align: center;
+
+    border: 1px solid rgba(155, 93, 229, 0.2);
+}
+
+
+/* Título interno */
+h2 {
+    color: rgb(66, 66, 66);
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+
+    border: none;
+    border-radius: 10px;
+
+    background: rgba(255,255,255,0.9);
+    color: #333;
+}
+
+input::placeholder {
+    color: #777;
+}
+
+
+/* Botão */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #9B5DE5;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: #7f3fd6;
+}
+
+
+/* Link */
+a {
+    display: block;
+    margin-top: 15px;
+    color: #9B5DE5;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
