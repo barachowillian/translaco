@@ -1,0 +1,106 @@
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f6f0ff;
+    padding: 20px;
+}
+
+.topo{
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.logo{
+    color:#7e22ce;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.perfil{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#c084fc;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-weight:bold;
+}
+
+.busca{
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    margin-bottom:20px;
+}
+
+input{
+    width:70%;
+    padding:12px;
+    border-radius:12px;
+    border:1px solid #ccc;
+}
+
+.btn{
+    padding:12px 20px;
+    border:none;
+    border-radius:12px;
+    background:#7e22ce;
+    color:white;
+    cursor:pointer;
+}
+
+.titulo{
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.vaga{
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    margin-bottom:15px;
+}
+
+.tag{
+    background:#dcfce7;
+    color:#15803d;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:12px;
+    display:inline-block;
+    margin-top:10px;
+}
+
+.curso{
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    margin-top:20px;
+}
+
+.curso-card{
+    background:#ede9fe;
+    padding:15px;
+    border-radius:15px;
+    margin-top:10px;
+}
+
+.menu{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    background:white;
+    display:flex;
+    justify-content:space-around;
+    padding:15px;
+    border-top:1px solid #ddd;
+}
