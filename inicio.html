@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TransLaço</title>
+
+    <link rel="stylesheet" href="inicio.css">
+</head>
+
+<body>
+
+
+    <!-- TELA DE ABERTURA -->
+
+    <div class="abertura" id="abertura">
+
+        <div class="logo-abertura">
+
+            <img
+                src="./img/imglogo.png"
+                alt="Logo TransLaço"
+                class="imagem-logo"
+            >
+
+            <div class="logo-texto">
+
+                <span>TRA</span>
+                <span>NSL</span>
+                <span>AÇO</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- TELA PRINCIPAL -->
+
+    <main class="tela-inicial" id="telaInicial">
+
+        <section class="conteudo-inicial">
+
+
+            <!-- LOGO -->
+
+            <div class="logo">
+
+                <img
+                    src="./img/imglogo.png"
+                    alt="Logo TransLaço"
+                    class="imagem-logo-principal"
+                >
+
+                <div class="logo-texto-principal">
+
+                    <span>TRA</span>
+                    <span>NSL</span>
+                    <span>AÇO</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DESCRIÇÃO -->
+
+            <p class="descricao">
+
+                Conectando histórias, promovendo respeito e ampliando oportunidades.
+                A <strong>TransLaço</strong> conecta pessoas trans e travestis
+                a empresas inclusivas, promovendo acesso ao mercado de trabalho
+                com igualdade e respeito.
+
+            </p>
+
+
+
+            <!-- FRASE -->
+
+            <p class="frase">
+
+                Inclusão • Respeito • Oportunidades
+
+            </p>
+
+
+
+            <!-- BOTÕES -->
+
+            <div class="botoes">
+
+                <a href="login.html" class="botao">
+                    Login
+                </a>
+
+                <a href="cadastro.html" class="botao">
+                    Cadastro
+                </a>
+
+            </div>
+
+
+
+            <!-- VISITANTE -->
+
+            <a
+                href="translaco.html"
+                class="botao visitante"
+            >
+                Visitante
+            </a>
+
+
+        </section>
+
+
+        <p class="versao">
+            TransLaço
+        </p>
+
+
+    </main>
+
+
+
+    <!-- ANIMAÇÃO -->
+
+    <script>
+
+        window.addEventListener("load", function () {
+
+            setTimeout(function () {
+
+                document
+                    .getElementById("abertura")
+                    .classList.add("sair");
+
+                document
+                    .getElementById("telaInicial")
+                    .classList.add("aparecer");
+
+            }, 2200);
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>

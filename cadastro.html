@@ -13,7 +13,7 @@
     <div class="box">
         <h2>Cadastro</h2>
 
-        <form method="POST" action="#">
+        <form method="POST" action="#" enctype="multipart/form-data">
 
             <input type="text" name="nome_social" placeholder="Nome social" required>
 
@@ -25,14 +25,39 @@
 
             <select name="area_interesse" required>
                 <option value="">Área de interesse</option>
-                <option>Direito</option>
-                <option>Tecnologia</option>
+
                 <option>Administração</option>
-                <option>Saúde</option>
+                <option>Arquitetura e Urbanismo</option>
+                <option>Artes</option>
+                <option>Comunicação</option>
+                <option>Contabilidade</option>
+                <option>Design</option>
+                <option>Direito</option>
                 <option>Educação</option>
+                <option>Engenharia</option>
+                <option>Finanças</option>
+                <option>Gastronomia</option>
+                <option>Gestão de Pessoas</option>
+                <option>Marketing</option>
+                <option>Meio Ambiente</option>
+                <option>Recursos Humanos</option>
+                <option>Saúde</option>
+                <option>Serviços</option>
+                <option>Tecnologia</option>
+                <option>Turismo</option>
+                <option>Outra</option>
             </select>
 
+            <label for="curriculo">Currículo (PDF)</label>
+            <input 
+                type="file" 
+                id="curriculo" 
+                name="curriculo" 
+                accept=".pdf"
+            >
+
             <button type="submit">Cadastrar</button>
+
         </form>
 
         <a href="./login.html">Voltar para login</a>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TransLaço - Cursos</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topo">
+
+        <div class="logo-area">
+            <div class="logo">TransLaço</div>
+            <p>Aprenda, desenvolva e conquiste novas oportunidades</p>
+        </div>
+
+        <a href="#" class="perfil" title="Meu perfil">
+            <span>AB</span>
+        </a>
+
+    </header>
+
+
+    <main class="conteudo">
+
+        <section class="busca">
+
+            <h2>Encontre cursos para desenvolver suas habilidades</h2>
+
+            <div class="campo-busca">
+
+                <input
+                    type="text"
+                    id="campoBusca"
+                    placeholder="Buscar cursos..."
+                >
+
+                <button class="btn" onclick="buscarCursos()">
+                    Buscar
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="vagas-section">
+
+            <h2 class="titulo">
+                Cursos em destaque
+            </h2>
+
+
+            <article class="vaga">
+
+                <button
+                    class="favorito"
+                    onclick="favoritar(this)"
+                    aria-label="Salvar curso"
+                >
+                    ♡
+                </button>
+
+                <h3>Marketing Digital</h3>
+
+                <p class="empresa">Instituição de Ensino Parceira</p>
+
+                <p class="localizacao">EAD - 120 horas</p>
+
+                <span class="tag">
+                    Gratuito
+                </span>
+
+                <div class="acoes">
+
+                    <button
+                        class="btn"
+                        onclick="matricular(this)"
+                    >
+                        Matricular-se
+                    </button>
+
+                    <button
+                        class="btn-secundario"
+                        onclick="visualizarCurso('Marketing Digital')"
+                    >
+                        Visualizar
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <article class="vaga">
+
+                <button
+                    class="favorito"
+                    onclick="favoritar(this)"
+                    aria-label="Salvar curso"
+                >
+                    ♡
+                </button>
+
+                <h3>Comunicação Profissional</h3>
+
+                <p class="empresa">Instituição de Ensino Parceira</p>
+
+                <p class="localizacao">EAD - 80 horas</p>
+
+                <span class="tag">
+                    Gratuito
+                </span>
+
+                <div class="acoes">
+
+                    <button
+                        class="btn"
+                        onclick="matricular(this)"
+                    >
+                        Matricular-se
+                    </button>
+
+                    <button
+                        class="btn-secundario"
+                        onclick="visualizarCurso('Comunicação Profissional')"
+                    >
+                        Visualizar
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <article class="vaga">
+
+                <button
+                    class="favorito"
+                    onclick="favoritar(this)"
+                    aria-label="Salvar curso"
+                >
+                    ♡
+                </button>
+
+                <h3>Informática Básica</h3>
+
+                <p class="empresa">Instituição de Ensino Parceira</p>
+
+                <p class="localizacao">EAD - 60 horas</p>
+
+                <span class="tag">
+                    Gratuito
+                </span>
+
+                <div class="acoes">
+
+                    <button
+                        class="btn"
+                        onclick="matricular(this)"
+                    >
+                        Matricular-se
+                    </button>
+
+                    <button
+                        class="btn-secundario"
+                        onclick="visualizarCurso('Informática Básica')"
+                    >
+                        Visualizar
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <article class="vaga">
+
+                <button
+                    class="favorito"
+                    onclick="favoritar(this)"
+                    aria-label="Salvar curso"
+                >
+                    ♡
+                </button>
+
+                <h3>Inglês - Nível Iniciante</h3>
+
+                <p class="empresa">Instituição de Ensino Parceira</p>
+
+                <p class="localizacao">EAD - 300 horas</p>
+
+                <span class="tag">
+                    Gratuito
+                </span>
+
+                <div class="acoes">
+
+                    <button
+                        class="btn"
+                        onclick="matricular(this)"
+                    >
+                        Matricular-se
+                    </button>
+
+                    <button
+                        class="btn-secundario"
+                        onclick="visualizarCurso('Inglês - Nível Iniciante')"
+                    >
+                        Visualizar
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <button class="ver-mais" onclick="mostrarMais()">
+                Ver mais cursos
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <nav class="menu">
+
+        <a href="translaco.html" class="menu-item">
+            <span>⌂</span>
+            <strong>Início</strong>
+        </a>
+
+        <a href="translaco.html#vagas" class="menu-item">
+            <span>☆</span>
+            <strong>Vagas</strong>
+        </a>
+
+        <a href="cursos.html" class="menu-item ativo">
+            <span>▢</span>
+            <strong>Cursos</strong>
+        </a>
+
+        <a href="#" class="menu-item">
+            <span>◯</span>
+            <strong>Perfil</strong>
+        </a>
+
+    </nav>
+
+
+    <script>
+
+        function matricular(botao) {
+
+            botao.textContent = "Inscrição realizada!";
+            botao.disabled = true;
+
+        }
+
+
+        function favoritar(botao) {
+
+            if (botao.textContent === "♡") {
+
+                botao.textContent = "♥";
+
+            } else {
+
+                botao.textContent = "♡";
+
+            }
+
+        }
+
+
+        function visualizarCurso(nome) {
+
+            alert(
+                "Curso: " + nome +
+                "\n\nAqui serão apresentados os detalhes completos do curso."
+            );
+
+        }
+
+
+        function mostrarMais() {
+
+            alert(
+                "Mais cursos profissionalizantes serão apresentados aqui."
+            );
+
+        }
+
+
+        function buscarCursos() {
+
+            const busca = document
+                .getElementById("campoBusca")
+                .value
+                .toLowerCase();
+
+            const cursos = document.querySelectorAll(".vaga");
+
+            cursos.forEach(function(curso) {
+
+                const texto = curso.textContent.toLowerCase();
+
+                if (texto.includes(busca)) {
+
+                    curso.style.display = "block";
+
+                } else {
+
+                    curso.style.display = "none";
+
+                }
+
+            });
+
+        }
+
+    </script>
+
+</body>
+
+</html>

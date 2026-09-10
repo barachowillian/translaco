@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Poppins:wght@400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+    background: #ffffff;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   ABERTURA
+========================================= */
+
+.abertura {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: #ffffff;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+
+    opacity: 1;
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+}
+
+
+.abertura.sair {
+    opacity: 0;
+
+    transform: scale(1.02);
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   LOGO DA ABERTURA
+========================================= */
+
+.logo-abertura {
+    position: relative;
+
+    width: 260px;
+    height: 260px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    animation: entradaLogo 1.3s ease forwards;
+}
+
+
+/* IMAGEM ATRÁS */
+
+.imagem-logo {
+    position: absolute;
+
+    width: 115px;
+    height: auto;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 1;
+}
+
+
+/* TEXTO NA FRENTE */
+
+.logo-texto {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-family: 'Major Mono Display', monospace;
+
+    font-size: 58px;
+
+    line-height: 0.85;
+
+    letter-spacing: 2px;
+
+    color: #000000;
+
+    text-align: center;
+}
+
+
+.logo-texto span {
+    display: block;
+}
+
+
+/* =========================================
+   TELA PRINCIPAL
+========================================= */
+
+.tela-inicial {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    background: #f5efff;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 30px;
+
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+
+.tela-inicial.aparecer {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   CONTEÚDO
+========================================= */
+
+.conteudo-inicial {
+    width: 100%;
+
+    max-width: 390px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* =========================================
+   LOGO PRINCIPAL
+========================================= */
+
+.logo {
+    position: relative;
+
+    width: 180px;
+    height: 190px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 35px;
+}
+
+
+/* IMAGEM ATRÁS */
+
+.imagem-logo-principal {
+    position: absolute;
+
+    width: 65px;
+    height: auto;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 1;
+}
+
+
+/* TEXTO NA FRENTE */
+
+.logo-texto-principal {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-family: 'Major Mono Display', monospace;
+
+    font-size: 40px;
+
+    line-height: 0.85;
+
+    letter-spacing: 1px;
+
+    color: #000000;
+
+    text-align: center;
+}
+
+
+.logo-texto-principal span {
+    display: block;
+}
+
+
+/* =========================================
+   DESCRIÇÃO
+========================================= */
+
+.descricao {
+    max-width: 420px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    color: #111111;
+
+    margin-bottom: 35px;
+}
+
+
+.descricao strong {
+    color: #9b5de5;
+}
+
+
+/* =========================================
+   FRASE
+========================================= */
+
+.frase {
+    text-align: center;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-bottom: 35px;
+
+    background: linear-gradient(
+        90deg,
+        #f7a1c4,
+        #9b5de5,
+        #5bc0eb
+    );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================================
+   BOTÕES
+========================================= */
+
+.botoes {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+}
+
+
+.botao {
+    width: 110px;
+
+    padding: 10px 15px;
+
+    border-radius: 25px;
+
+    background: linear-gradient(
+        90deg,
+        #ed8ed0,
+        #8fb5f5
+    );
+
+    color: #111111;
+
+    text-decoration: none;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.botao:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 7px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+.visitante {
+    width: 110px;
+}
+
+
+/* =========================================
+   TEXTO INFERIOR
+========================================= */
+
+.versao {
+    position: absolute;
+
+    right: 10px;
+    bottom: 7px;
+
+    font-size: 5px;
+
+    color: #555555;
+}
+
+
+/* =========================================
+   ANIMAÇÃO
+========================================= */
+
+@keyframes entradaLogo {
+
+    0% {
+        opacity: 0;
+
+        transform: scale(0.65);
+    }
+
+    60% {
+        opacity: 1;
+
+        transform: scale(1.08);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform: scale(1);
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .logo-abertura {
+        width: 220px;
+        height: 220px;
+    }
+
+    .logo-texto {
+        font-size: 48px;
+    }
+
+    .imagem-logo {
+        width: 90px;
+    }
+
+    .tela-inicial {
+        padding: 40px 20px;
+    }
+
+}
+
+
+@media (max-height: 650px) {
+
+    .logo {
+        margin-bottom: 20px;
+    }
+
+    .descricao {
+        margin-bottom: 20px;
+    }
+
+    .frase {
+        margin-bottom: 20px;
+    }
+
+}

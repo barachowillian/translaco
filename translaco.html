@@ -2,89 +2,289 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TransLaço</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="style.css">
+    <title>TransLaço - Vagas</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <div class="topo">
-    <div>
-      <div class="logo">TransLaço</div>
-      <p>Bem-vinde de volta </p>
-    </div>
+    <header class="topo">
 
-    <div class="perfil">
-      
-    </div>
-  </div>
+        <div class="logo-area">
+            <div class="logo">TransLaço</div>
+            <p>Bem-vinde de volta</p>
+        </div>
 
-  <div class="busca">
-    <h2>Encontre oportunidades inclusivas</h2>
+        <a href="#" class="perfil" title="Meu perfil">
+            <span>AB</span>
+        </a>
 
-    <input type="text" placeholder="Buscar vagas...">
-    <button class="btn">Buscar</button>
-  </div>
+    </header>
 
-  <div class="titulo">
-    Vagas em destaque
-  </div>
 
-  <div class="vaga">
-    <h3>Assistente Administrativo</h3>
-    <p>Empresa Inclusiva+</p>
-    <p>Londrina - PR</p>
+    <main class="conteudo">
 
-    <div class="tag">
-      Inclusiva
-    </div>
+        <section class="busca">
 
-    <br><br>
+            <h2>Encontre oportunidades inclusivas</h2>
 
-    <button class="btn">
-      Candidatar-se
-    </button>
-  </div>
+            <div class="campo-busca">
 
-  <div class="vaga">
-    <h3>Social Media</h3>
-    <p>Conecta Digital</p>
-    <p>Remoto</p>
+                <input
+                    type="text"
+                    id="campoBusca"
+                    placeholder="Buscar vagas..."
+                >
 
-    <div class="tag">
-      Inclusiva
-    </div>
+                <button class="btn" onclick="buscarVagas()">
+                    Buscar
+                </button>
 
-    <br><br>
+            </div>
 
-    <button class="btn">
-      Candidatar-se
-    </button>
-  </div>
+        </section>
 
-  <div class="curso">
-    <h2>Cursos profissionalizantes</h2>
 
-    <div class="curso-card">
-      <h3>Marketing Digital</h3>
-      <p>Aprenda divulgação e redes sociais.</p>
-    </div>
+        <section class="vagas-section">
 
-    <div class="curso-card">
-      <h3>Comunicação</h3>
-      <p>Desenvolva habilidades profissionais.</p>
-    </div>
-  </div>
+            <h2 class="titulo">
+                Vagas em destaque
+            </h2>
 
-  <div class="menu">
-    <div>Início</div>
-    <div>Vagas</div>
-    <div>Cursos</div>
-    <div>Perfil</div>
-  </div>
+
+            <article class="vaga">
+
+                <button
+                    class="favorito"
+                    onclick="favoritar(this)"
+                    aria-label="Salvar vaga"
+                >
+                    ♡
+                </button>
+
+                <h3>Assistente Administrativo</h3>
+
+                <p class="empresa">Empresa Inclusiva+</p>
+
+                <p class="localizacao">Londrina - PR</p>
+
+                <span class="tag">
+                    Inclusiva
+                </span>
+
+                <div class="acoes">
+
+                    <button
+                        class="btn"
+                        onclick="candidatar(this)"
+                    >
+                        Candidatar-se
+                    </button>
+
+                    <button
+                        class="btn-secundario"
+                        onclick="visualizarVaga('Assistente Administrativo')"
+                    >
+                        Visualizar
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <article class="vaga">
+
+                <button
+                    class="favorito"
+                    onclick="favoritar(this)"
+                    aria-label="Salvar vaga"
+                >
+                    ♡
+                </button>
+
+                <h3>Analista de Dados</h3>
+
+                <p class="empresa">Empresa Inclusiva+</p>
+
+                <p class="localizacao">Londrina - PR</p>
+
+                <span class="tag">
+                    Inclusiva
+                </span>
+
+                <div class="acoes">
+
+                    <button
+                        class="btn"
+                        onclick="candidatar(this)"
+                    >
+                        Candidatar-se
+                    </button>
+
+                    <button
+                        class="btn-secundario"
+                        onclick="visualizarVaga('Analista de Dados')"
+                    >
+                        Visualizar
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <article class="vaga">
+
+                <button
+                    class="favorito"
+                    onclick="favoritar(this)"
+                    aria-label="Salvar vaga"
+                >
+                    ♡
+                </button>
+
+                <h3>Social Media</h3>
+
+                <p class="empresa">Conecta Digital</p>
+
+                <p class="localizacao">Remoto</p>
+
+                <span class="tag">
+                    Inclusiva
+                </span>
+
+                <div class="acoes">
+
+                    <button
+                        class="btn"
+                        onclick="candidatar(this)"
+                    >
+                        Candidatar-se
+                    </button>
+
+                    <button
+                        class="btn-secundario"
+                        onclick="visualizarVaga('Social Media')"
+                    >
+                        Visualizar
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <button class="ver-mais" onclick="mostrarMais()">
+                Ver mais
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <nav class="menu">
+
+        <a href="translaco.html" class="menu-item ativo">
+            <span>⌂</span>
+            <strong>Início</strong>
+        </a>
+
+        <a href="translaco.html#vagas" class="menu-item">
+            <span>☆</span>
+            <strong>Vagas</strong>
+        </a>
+
+        <a href="cursos.html" class="menu-item">
+            <span>▢</span>
+            <strong>Cursos</strong>
+        </a>
+
+        <a href="#" class="menu-item">
+            <span>◯</span>
+            <strong>Perfil</strong>
+        </a>
+
+    </nav>
+
+
+    <script>
+
+        function candidatar(botao) {
+
+            botao.textContent = "Candidatura enviada!";
+            botao.disabled = true;
+
+        }
+
+
+        function favoritar(botao) {
+
+            if (botao.textContent === "♡") {
+
+                botao.textContent = "♥";
+
+            } else {
+
+                botao.textContent = "♡";
+
+            }
+
+        }
+
+
+        function visualizarVaga(nome) {
+
+            alert(
+                "Vaga: " + nome +
+                "\n\nOs detalhes completos desta oportunidade serão apresentados nesta área."
+            );
+
+        }
+
+
+        function mostrarMais() {
+
+            alert(
+                "Mais oportunidades inclusivas serão apresentadas aqui."
+            );
+
+        }
+
+
+        function buscarVagas() {
+
+            const busca = document
+                .getElementById("campoBusca")
+                .value
+                .toLowerCase();
+
+            const vagas = document.querySelectorAll(".vaga");
+
+            vagas.forEach(function(vaga) {
+
+                const texto = vaga.textContent.toLowerCase();
+
+                if (texto.includes(busca)) {
+
+                    vaga.style.display = "block";
+
+                } else {
+
+                    vaga.style.display = "none";
+
+                }
+
+            });
+
+        }
+
+    </script>
 
 </body>
 

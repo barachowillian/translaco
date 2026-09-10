@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;     
 }
 
 body {
@@ -21,7 +21,7 @@ body {
 /* LOGO PRINCIPAL */
 h1 {
     position: absolute;
-    top: 40px;
+    top: 20px;
 
     font-family: 'Major Mono Display', monospace;
     font-size: 54px;
@@ -42,7 +42,7 @@ h1 {
 /* Caixa */
 .box {
     backdrop-filter: blur(12px);
-    background: rgba(255, 255, 255, 0.75);
+    background: rgb(255, 255, 255);
 
     color: #333;
 
@@ -78,16 +78,21 @@ label {
 /* Inputs e Select */
 input, select {
     width: 100%;
-    padding: 12px;
-    margin-top: 5px;
+    box-sizing: border-box;
+
+    padding: 7px;
+    margin-top: 4px;
+    margin-bottom: 4px;
 
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
 
-    background: rgba(255,255,255,0.9);
+    background: rgb(243, 240, 240);
     color: #333;
 
     outline: none;
+    top: 20px
+    font-size 14px;
 }
 
 
