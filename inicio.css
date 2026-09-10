@@ -432,7 +432,9 @@ body {
 }
 
 
-@media (max-height: 650px) {
+@media (max-height: 650px)
+
+{
 
     .logo {
         margin-bottom: 20px;
