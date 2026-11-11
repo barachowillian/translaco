@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil | TransLaço</title>
+    <link rel="stylesheet" href="perfil.css">
+</head>
+<body>
+
+<header class="topo">
+    <a href="inicio.html">
+        <img src="img/imglogo.png" alt="TransLaço" class="logo">
+    </a>
+    <a href="translaco.html" class="voltar">Voltar às vagas</a>
+</header>
+
+<main class="container">
+    <section class="titulo">
+        <h1>Meu perfil</h1>
+        <p>Gerencie suas informações pessoais e profissionais.</p>
+    </section>
+
+    <section class="perfil-banner">
+        <div class="avatar" id="avatar">TL</div>
+        <div>
+            <h2 id="nomeExibido">Meu perfil</h2>
+            <p id="emailExibido">Suas informações aparecerão aqui</p>
+        </div>
+    </section>
+
+    <form id="formPerfil">
+
+        <section class="card">
+            <h2>Informações pessoais</h2>
+
+            <div class="campos">
+                <div class="campo">
+                    <label for="nomeSocial">Nome social</label>
+                    <input type="text" id="nomeSocial" required>
+                </div>
+
+                <div class="campo">
+                    <label for="nomeCivil">Nome civil (opcional)</label>
+                    <input type="text" id="nomeCivil">
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="campo">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" placeholder="(00) 00000-0000">
+                </div>
+
+                <div class="campo">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade">
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Informações profissionais</h2>
+
+            <div class="campos">
+                <div class="campo">
+                    <label for="area">Área de interesse</label>
+                    <select id="area">
+                        <option value="">Selecione</option>
+                        <option>Tecnologia</option>
+                        <option>Administração</option>
+                        <option>Comunicação</option>
+                        <option>Design</option>
+                        <option>Saúde</option>
+                        <option>Educação</option>
+                        <option>Comércio</option>
+                        <option>Outra</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="experiencia">Experiência profissional</label>
+                    <select id="experiencia">
+                        <option value="">Selecione</option>
+                        <option>Sem experiência</option>
+                        <option>Menos de 1 ano</option>
+                        <option>1 a 2 anos</option>
+                        <option>3 a 5 anos</option>
+                        <option>Mais de 5 anos</option>
+                    </select>
+                </div>
+
+                <div class="campo campo-completo">
+                    <label for="sobre">Sobre mim</label>
+                    <textarea id="sobre" placeholder="Conte um pouco sobre você, suas habilidades e objetivos."></textarea>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Formação acadêmica</h2>
+
+            <div class="campos">
+                <div class="campo">
+                    <label for="escolaridade">Escolaridade</label>
+                    <select id="escolaridade">
+                        <option value="">Selecione</option>
+                        <option>Ensino fundamental</option>
+                        <option>Ensino médio incompleto</option>
+                        <option>Ensino médio completo</option>
+                        <option>Ensino técnico</option>
+                        <option>Ensino superior incompleto</option>
+                        <option>Ensino superior completo</option>
+                        <option>Pós-graduação</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="formacao">Curso ou formação</label>
+                    <input type="text" id="formacao" placeholder="Ex.: Técnico em Informática">
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Currículo</h2>
+            <p class="descricao">Adicione seu currículo em formato PDF.</p>
+
+            <input type="file" id="curriculo" accept=".pdf,application/pdf">
+            <p id="curriculoAtual">Nenhum currículo anexado.</p>
+        </section>
+
+        <section class="card">
+            <h2>Preferências profissionais</h2>
+
+            <div class="campos">
+                <div class="campo">
+                    <label for="modalidade">Modalidade de trabalho</label>
+                    <select id="modalidade">
+                        <option value="">Selecione</option>
+                        <option>Presencial</option>
+                        <option>Remoto</option>
+                        <option>Híbrido</option>
+                        <option>Indiferente</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="tipoVaga">Tipo de oportunidade</label>
+                    <select id="tipoVaga">
+                        <option value="">Selecione</option>
+                        <option>Estágio</option>
+                        <option>Jovem aprendiz</option>
+                        <option>CLT</option>
+                        <option>Freelancer</option>
+                        <option>Temporário</option>
+                        <option>Qualquer oportunidade</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Completude do perfil</h2>
+            <p id="textoProgresso">0% preenchido</p>
+            <div class="progresso">
+                <div id="barraProgresso"></div>
+            </div>
+        </section>
+
+        <div class="botoes">
+            <button type="submit" class="botao-salvar">Salvar alterações</button>
+            <a href="translaco.html" class="botao-voltar">Voltar</a>
+        </div>
+
+    </form>
+</main>
+
+<nav class="menu-inferior">
+    <a href="inicio.html">Início</a>
+    <a href="translaco.html">Vagas</a>
+    <a href="cursos.html">Cursos</a>
+    <a href="perfilusuario.html" class="ativo">Perfil</a>
+</nav>
+
+<script src="perfil.js"></script>
+</body>
+</html>

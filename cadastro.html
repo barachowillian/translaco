@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <meta charset='utf-8'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TransLaço - Cadastro</title>
-    <link rel='stylesheet' href='main.css'>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
 
@@ -13,19 +15,22 @@
     <div class="box">
         <h2>Cadastro</h2>
 
-        <form method="POST" action="#" enctype="multipart/form-data">
+        <form id="formCadastro">
 
-            <input type="text" name="nome_social" placeholder="Nome social" required>
+            <input type="text" id="nome_social"
+                placeholder="Nome social" required>
 
-            <input type="text" name="nome_civil" placeholder="Nome civil (opcional)">
+            <input type="text" id="nome_civil"
+                placeholder="Nome civil (opcional)">
 
-            <input type="email" name="email" placeholder="Email" required>
+            <input type="email" id="email"
+                placeholder="Email" required>
 
-            <input type="password" name="senha" placeholder="Senha" required>
+            <input type="password" id="senha"
+                placeholder="Senha" required minlength="6">
 
-            <select name="area_interesse" required>
+            <select id="area_interesse" required>
                 <option value="">Área de interesse</option>
-
                 <option>Administração</option>
                 <option>Arquitetura e Urbanismo</option>
                 <option>Artes</option>
@@ -49,20 +54,20 @@
             </select>
 
             <label for="curriculo">Currículo (PDF)</label>
-            <input 
-                type="file" 
-                id="curriculo" 
-                name="curriculo" 
-                accept=".pdf"
-            >
+            <input type="file" id="curriculo"
+                accept=".pdf,application/pdf">
 
             <button type="submit">Cadastrar</button>
 
         </form>
 
-        <a href="./login.html">Voltar para login</a>
+        <p id="mensagemCadastro"></p>
+
+        <a href="login.html">Voltar para login</a>
     </div>
 </div>
+
+<script src="cadastro.js"></script>
 
 </body>
 </html>

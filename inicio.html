@@ -151,6 +151,35 @@
 
     </script>
 
+<script>
+    const usuarioTranslaco = JSON.parse(
+        localStorage.getItem("translacoUsuario") || "null"
+    );
+
+    const iniciaisPerfil = document.getElementById("iniciaisPerfil");
+    const nomeUsuario = document.getElementById("nomeUsuario");
+
+    if (usuarioTranslaco) {
+        const nome = usuarioTranslaco.nomeSocial || "TransLaço";
+
+        if (iniciaisPerfil) {
+            iniciaisPerfil.textContent = nome
+                .trim()
+                .split(/\s+/)
+                .filter(Boolean)
+                .slice(0, 2)
+                .map(palavra => palavra[0].toUpperCase())
+                .join("");
+        }
+
+        if (nomeUsuario) {
+            nomeUsuario.textContent = nome;
+        }
+    }
+</script>
+</body>
+</html>
+
 
 </body>
 
